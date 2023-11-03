@@ -1,0 +1,41 @@
+.bannerContainer {
+  position: relative;
+  /* width: 100vw; */
+  padding: 1rem;
+}
+.title {
+  font-size: 3rem;
+  /* text-wrap: wrap;
+  word-wrap: break-word; */
+  overflow-wrap: break-word;
+}
+.title1 {
+  color: var(--white);
+}
+.title2 {
+  color: var(--blue);
+  padding-left: 0.5rem;
+}
+.subtitle {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--white);
+}
+.button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  margin-top: 1rem;
+}
+
+@media only screen and (max-width: 425px) {
+  .title1 {
+    /* width: 100%; */
+    display: block;
+  }
+  .title2 {
+    padding-left: 0;
+  }
+}
