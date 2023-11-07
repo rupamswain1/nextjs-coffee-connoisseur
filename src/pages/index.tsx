@@ -23,6 +23,14 @@ export default function Home() {
           buttonText="View Stores Nearby"
           onButtonPress={handleButtonPress}
         />
+        <div className={styles.heroImage}>
+          <Image
+            src="/static/hero-image.png"
+            alt="Banner Image"
+            width={700}
+            height={400}
+          />
+        </div>
       </main>
     </>
   );

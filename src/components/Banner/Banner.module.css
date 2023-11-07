@@ -1,12 +1,9 @@
 .bannerContainer {
   position: relative;
-  /* width: 100vw; */
   padding: 1rem;
 }
 .title {
   font-size: 3rem;
-  /* text-wrap: wrap;
-  word-wrap: break-word; */
   overflow-wrap: break-word;
 }
 .title1 {
@@ -21,16 +18,11 @@
   font-size: 1.3rem;
   color: var(--white);
 }
-.button {
-  padding: 0.8rem;
-  font-size: 1rem;
-  background-color: var(--blue);
-  color: var(--white);
-  border: none;
-  margin-top: 1rem;
-}
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 426px) {
+  .bannerContainer {
+    padding: 0rem;
+  }
   .title1 {
     /* width: 100%; */
     display: block;
