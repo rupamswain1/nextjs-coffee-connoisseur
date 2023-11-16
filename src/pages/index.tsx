@@ -30,7 +30,13 @@ export default function Home() {
             height={400}
           />
         </div>
-        <div>
+        <div className={styles.flex}>
+          <Card
+            cardName="Test Card"
+            imageUrl="/static/hero-image.png"
+            alt="hero image"
+            href="/coffee-store/test"
+          />
           <Card
             cardName="Test Card"
             imageUrl="/static/hero-image.png"

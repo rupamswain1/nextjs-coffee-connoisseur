@@ -48,3 +48,17 @@ button:hover {
   color: var(--blue);
   border: 2px solid var(--blue);
 }
+.glassMorph {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+}
+.glassMorph:hover {
+  background: rgba(255, 255, 255, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
+}
