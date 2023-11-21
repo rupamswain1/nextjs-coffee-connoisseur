@@ -18,7 +18,12 @@ const Card: React.FC<ICardProps> = ({ cardName, imageUrl, href, alt }) => {
           <h2>{cardName}</h2>
         </div>
         <div className={styles.imageContainer}>
-          {/* <Image src={imageUrl} alt={alt} width={250} height={300} /> */}
+          <Image
+            src={imageUrl}
+            alt={alt}
+            fill={true}
+            style={{ borderRadius: '5%' }}
+          />
         </div>
       </Link>
     </div>

@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.css';
 import Banner from '@/components/Banner/Banner';
 import Card from '@/components/Card/Card';
 
+import coffeeStoreData from '../data/coffee-stores.json';
+
 export default function Home() {
   const handleButtonPress = () => {
     console.log('button clicked');
@@ -31,18 +33,16 @@ export default function Home() {
           />
         </div>
         <div className={styles.flex}>
-          <Card
-            cardName="Test Card"
-            imageUrl="/static/hero-image.png"
-            alt="hero image"
-            href="/coffee-store/test"
-          />
-          <Card
-            cardName="Test Card"
-            imageUrl="/static/hero-image.png"
-            alt="hero image"
-            href="/coffee-store/test"
-          />
+          {coffeeStoreData.map((coffeeStore) => {
+            return (
+              <Card
+                cardName={coffeeStore.name}
+                imageUrl={coffeeStore.imgUrl}
+                alt={coffeeStore.name}
+                href={`/coffee-store/${coffeeStore.id}`}
+              />
+            );
+          })}
         </div>
       </main>
     </>
