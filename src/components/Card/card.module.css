@@ -1,0 +1,16 @@
+.cardContainer {
+  border: 1px solid black;
+  width: 20rem;
+  height: 18rem;
+  margin: 1rem;
+}
+.headerContainer {
+  padding: 10px;
+  color: var(--blue);
+}
+.imageContainer {
+  width: 90%;
+  margin: 1rem;
+  height: 73%;
+  position: relative;
+}

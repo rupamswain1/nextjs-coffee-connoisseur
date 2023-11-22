@@ -1,6 +1,6 @@
 :root {
   --white: #fff;
-  --blue: #1767a0;
+  --blue: #0c5d97;
 }
 
 * {
@@ -28,4 +28,37 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: var(--blue);
+  color: var(--white);
+  border: var(--blue);
+  margin-top: 1rem;
+}
+button {
+  cursor: pointer;
+}
+button:focus {
+  border-color: var(--white);
+}
+button:hover {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 2px solid var(--blue);
+}
+.glassMorph {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.42);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(19.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 25px;
+}
+.glassMorph:hover {
+  background: rgba(255, 255, 255, 0.63);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: 0.3s;
 }

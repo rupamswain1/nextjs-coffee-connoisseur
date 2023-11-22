@@ -1,8 +1,35 @@
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* display: flex; */
   padding: 6rem;
   min-height: 100vh;
+}
+.heroImage {
+  position: absolute;
+  z-index: 1;
+  left: 30%;
+  top: 0;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 1024px) {
+  .heroImage {
+    right: 20%;
+  }
+}
+@media only screen and (max-width: 769px) {
+  .heroImage {
+    right: 0%;
+    left: 0;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .main {
+    padding: 2rem;
+  }
+  .heroImage {
+    z-index: -1;
+    left: 0vw;
+  }
 }

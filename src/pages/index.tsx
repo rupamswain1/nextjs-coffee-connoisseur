@@ -3,8 +3,9 @@ import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import Banner from '@/components/Banner/Banner';
+import Card from '@/components/Card/Card';
 
-const inter = Inter({ subsets: ['latin'] });
+import coffeeStoreData from '../data/coffee-stores.json';
 
 export default function Home() {
   const handleButtonPress = () => {
@@ -18,11 +19,31 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
+      <main className={`${styles.main}`}>
         <Banner
           buttonText="View Stores Nearby"
           onButtonPress={handleButtonPress}
         />
+        <div className={styles.heroImage}>
+          <Image
+            src="/static/hero-image.png"
+            alt="Banner Image"
+            width={700}
+            height={400}
+          />
+        </div>
+        <div className={styles.flex}>
+          {coffeeStoreData.map((coffeeStore) => {
+            return (
+              <Card
+                cardName={coffeeStore.name}
+                imageUrl={coffeeStore.imgUrl}
+                alt={coffeeStore.name}
+                href={`/coffee-store/${coffeeStore.id}`}
+              />
+            );
+          })}
+        </div>
       </main>
     </>
   );
