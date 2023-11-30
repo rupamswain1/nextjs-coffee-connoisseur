@@ -7,7 +7,15 @@ import Card from '@/components/Card/Card';
 
 import coffeeStoreData from '../data/coffee-stores.json';
 
-export default function Home() {
+export async function getStaticProps(context) {
+  return {
+    props: {
+      coffeeStoreData,
+    },
+  };
+}
+
+export default function Home(props) {
   const handleButtonPress = () => {
     console.log('button clicked');
   };
@@ -33,7 +41,7 @@ export default function Home() {
           />
         </div>
         <div className={styles.flex}>
-          {coffeeStoreData.map((coffeeStore) => {
+          {props.coffeeStoreData.map((coffeeStore) => {
             return (
               <Card
                 cardName={coffeeStore.name}
