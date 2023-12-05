@@ -62,3 +62,6 @@ button:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition: 0.3s;
 }
+.ml-1rem {
+  margin-left: 1.5rem;
+}

@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
 import Banner from '@/components/Banner/Banner';
 import Card from '@/components/Card/Card';
-
+import cls from 'classnames';
 import coffeeStoreData from '../data/coffee-stores.json';
 
 export async function getStaticProps(context) {
@@ -40,18 +40,27 @@ export default function Home(props) {
             height={400}
           />
         </div>
-        <div className={styles.flex}>
-          {props.coffeeStoreData.map((coffeeStore) => {
-            return (
-              <Card
-                cardName={coffeeStore.name}
-                imageUrl={coffeeStore.imgUrl}
-                alt={coffeeStore.name}
-                href={`/coffee-store/${coffeeStore.id}`}
-              />
-            );
-          })}
-        </div>
+        {coffeeStoreData.length > 0 && (
+          <>
+            <div>
+              <h2 className={cls(styles.heading2, 'ml-1rem')}>
+                Banglore Stores
+              </h2>
+            </div>
+            <div className={styles.flex}>
+              {props.coffeeStoreData.map((coffeeStore) => {
+                return (
+                  <Card
+                    cardName={coffeeStore.name}
+                    imageUrl={coffeeStore.imgUrl}
+                    alt={coffeeStore.name}
+                    href={`/coffee-store/${coffeeStore.id}`}
+                  />
+                );
+              })}
+            </div>
+          </>
+        )}
       </main>
     </>
   );

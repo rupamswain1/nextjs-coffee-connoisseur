@@ -13,6 +13,15 @@
   display: flex;
   flex-wrap: wrap;
 }
+.title2 {
+  color: var(--blue);
+  padding-left: 0.5rem;
+}
+.heading2 {
+  color: var(--white);
+  font-size: 2.5rem;
+}
+
 @media only screen and (max-width: 1024px) {
   .heroImage {
     right: 20%;
